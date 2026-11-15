@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MYSTERY 🌹</title>
+<meta name="theme-color" content="#130015">
+<title>MYSTERY | A Beautiful Secret</title>
 
 <style>
 * {
@@ -15,78 +16,264 @@
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle, #42002b, #100010, #000);
+  background:
+    radial-gradient(ellipse at top, #650044 0%, transparent 55%),
+    linear-gradient(145deg, #08000d, #21001f, #08000d);
   color: white;
   font-family: Georgia, serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
   text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
+/* BACKGROUND LIGHTS */
+
+.glow {
+  position: fixed;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #ff1493;
+  filter: blur(120px);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.glow.one {
+  top: 5%;
+  left: -100px;
+}
+
+.glow.two {
+  bottom: 5%;
+  right: -100px;
+  background: #a020f0;
+}
+
+/* MAIN CONTENT */
 
 .container {
+  position: relative;
   z-index: 2;
-  padding: 25px;
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  padding: 55px 20px;
 }
+
+/* TOP LABEL */
+
+.top-label {
+  color: #ff9ed5;
+  font-size: 12px;
+  letter-spacing: 6px;
+  margin-bottom: 22px;
+}
+
+/* MAIN TITLE */
 
 h1 {
-  font-size: 65px;
-  letter-spacing: 8px;
-  color: #ff83c5;
-  text-shadow: 0 0 25px #ff1493;
+  font-size: clamp(48px, 12vw, 88px);
+  letter-spacing: 9px;
+  color: #ffb4df;
+  text-shadow:
+    0 0 10px #ff1493,
+    0 0 30px #ff1493,
+    0 0 65px #a00070;
+  animation: titleGlow 3s infinite alternate;
 }
+
+@keyframes titleGlow {
+  from {
+    text-shadow: 0 0 15px #ff1493;
+  }
+  to {
+    text-shadow: 0 0 45px #ff1493,
+                 0 0 80px #a00070;
+  }
+}
+
+/* SUBTITLE */
 
 .subtitle {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #ffd6eb;
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #f9c9e5;
+  letter-spacing: 1px;
 }
 
-.flowers {
-  font-size: 65px;
-  margin: 35px 0;
-  animation: move 3s infinite alternate;
+/* DECORATIVE LINE */
+
+.line {
+  width: 110px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ff69b4, transparent);
+  margin: 28px auto;
 }
+
+/* FLOWERS */
+
+.flower-box {
+  margin: 35px auto;
+  font-size: clamp(48px, 12vw, 75px);
+  animation: flowerMove 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px #ff1493);
+}
+
+@keyframes flowerMove {
+  0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(4deg);
+  }
+}
+
+/* MESSAGE CARD */
+
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,160,220,0.35);
+  border-radius: 22px;
+  padding: 30px 20px;
+  margin-top: 35px;
+  box-shadow: 0 0 35px rgba(255,20,147,0.12);
+  backdrop-filter: blur(10px);
+}
+
+.card h2 {
+  color: #ffb4df;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #f5d9eb;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* BUTTON */
 
 button {
-  padding: 15px 35px;
-  border: 1px solid pink;
-  border-radius: 30px;
-  background: transparent;
-  color: white;
-  font-size: 17px;
   margin-top: 30px;
+  padding: 16px 32px;
+  border: 1px solid #ff8acb;
+  border-radius: 40px;
+  background: linear-gradient(120deg, #b00067, #ff299c);
+  color: white;
+  font-size: 16px;
+  font-family: Georgia, serif;
+  letter-spacing: 1px;
+  box-shadow: 0 0 25px rgba(255,20,147,0.45);
   cursor: pointer;
-  box-shadow: 0 0 20px #ff1493;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #ff1493;
+  transform: scale(1.07);
+  box-shadow: 0 0 40px #ff1493;
 }
 
-#message {
+/* SECRET MESSAGE */
+
+#secret {
   display: none;
-  margin-top: 25px;
-  color: #ffb6dc;
-  font-size: 20px;
-  line-height: 1.7;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,20,147,0.12);
+  border: 1px solid #ff69b4;
+  animation: appear 1s ease;
 }
 
-.petal {
-  position: absolute;
-  top: -30px;
-  animation: fall linear infinite;
+#secret h2 {
+  color: #ffb4df;
+  margin-bottom: 15px;
 }
 
-@keyframes move {
-  from { transform: scale(1); }
-  to { transform: scale(1.15); }
+#secret p {
+  color: #ffe0f1;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BOTTOM TEXT */
+
+.footer {
+  margin-top: 45px;
+  color: #d99abd;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* FALLING DECORATIONS */
+
+.falling {
+  position: fixed;
+  top: -50px;
+  z-index: 1;
+  pointer-events: none;
+  animation: fall linear forwards;
 }
 
 @keyframes fall {
   to {
-    transform: translateY(110vh) rotate(720deg);
+    transform: translateY(110vh) rotate(700deg);
+    opacity: 0;
+  }
+}
+
+/* SPARKLES */
+
+.sparkle {
+  position: fixed;
+  color: #ffc0e0;
+  font-size: 15px;
+  pointer-events: none;
+  animation: sparkle 3s infinite alternate;
+}
+
+@keyframes sparkle {
+  from {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+/* MOBILE DESIGN */
+
+@media(max-width: 480px) {
+  .container {
+    padding: 45px 18px;
+  }
+
+  h1 {
+    letter-spacing: 5px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .card {
+    padding: 24px 16px;
   }
 }
 </style>
@@ -94,49 +281,134 @@ button:hover {
 
 <body>
 
+<div class="glow one"></div>
+<div class="glow two"></div>
+
 <div class="container">
+
+  <div class="top-label">
+    ✦ A WORLD OF SECRETS ✦
+  </div>
 
   <h1>MYSTERY</h1>
 
   <p class="subtitle">
-    Some secrets are too beautiful to explain... ✨
+    Not everything beautiful needs an explanation...
+    <br>
+    Some things are simply magical. ✨
   </p>
 
-  <div class="flowers">
+  <div class="line"></div>
+
+  <div class="flower-box">
     🌹 🌸 🌷
   </div>
 
-  <button onclick="reveal()">
-    Discover The Secret 💌
-  </button>
+  <div class="card">
+    <h2>A Little Mystery 💗</h2>
 
-  <div id="message">
-    You are someone's beautiful mystery. 💗
-    <br>
-    Never stop being special. 🌹
+    <p>
+      Behind every beautiful moment,
+      there is a secret waiting to be discovered.
+      <br>
+      Are you ready to discover yours?
+    </p>
+
+    <button onclick="revealSecret()">
+      ✨ Discover The Secret ✨
+    </button>
+
+    <div id="secret">
+      <h2>🌹 A Special Message 🌹</h2>
+
+      <p>
+        You are rare, you are beautiful,
+        and you are one of a kind. 💖
+        <br><br>
+        Never forget how special you are.
+        <br>
+        Some mysteries are worth keeping forever. ✨
+      </p>
+
+      <div style="font-size:40px; margin-top:20px;">
+        💐💕🌹
+      </div>
+    </div>
+  </div>
+
+  <div class="flower-box">
+    💐 🌺 💐
+  </div>
+
+  <div class="line"></div>
+
+  <p class="subtitle">
+    "Every flower has a story.
+    Every heart has a secret."
+  </p>
+
+  <div class="footer">
+    MADE WITH LOVE ♡ MYSTERY
   </div>
 
 </div>
 
 <script>
-function reveal() {
-  document.getElementById("message").style.display = "block";
+function revealSecret() {
+  const secret = document.getElementById("secret");
+
+  secret.style.display = "block";
+
+  document.querySelector("button").innerHTML =
+    "💗 Your Secret Is Revealed 💗";
+
+  secret.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
 
-const flowers = ["🌸","🌹","💗","✨","🌷"];
+/* FALLING FLOWERS AND HEARTS */
 
-setInterval(() => {
-  let petal = document.createElement("div");
-  petal.className = "petal";
-  petal.innerHTML = flowers[Math.floor(Math.random()*flowers.length)];
-  petal.style.left = Math.random()*100 + "vw";
-  petal.style.animationDuration = (4+Math.random()*5)+"s";
-  petal.style.fontSize = "25px";
+const decorations = [
+  "🌹", "🌸", "💗", "✨",
+  "🌷", "💕", "💮", "🌺"
+];
 
-  document.body.appendChild(petal);
+function createFalling() {
+  const item = document.createElement("div");
 
-  setTimeout(() => petal.remove(), 9000);
-}, 400);
+  item.className = "falling";
+  item.innerHTML =
+    decorations[Math.floor(Math.random() * decorations.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (18 + Math.random() * 25) + "px";
+  item.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+  document.body.appendChild(item);
+
+  setTimeout(() => item.remove(), 11000);
+}
+
+setInterval(createFalling, 450);
+
+/* SPARKLES */
+
+function createSparkle() {
+  const star = document.createElement("div");
+
+  star.className = "sparkle";
+  star.innerHTML = "✦";
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.top = Math.random() * 100 + "vh";
+
+  document.body.appendChild(star);
+
+  setTimeout(() => star.remove(), 4000);
+}
+
+setInterval(createSparkle, 700);
 </script>
 
 </body>
