@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="so">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#130015">
-<title>MYSTERY | A Beautiful Secret</title>
+<title>🌹 Sirta Ridwaan</title>
 
 <style>
 * {
@@ -16,399 +15,207 @@
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(ellipse at top, #650044 0%, transparent 55%),
-    linear-gradient(145deg, #08000d, #21001f, #08000d);
-  color: white;
-  font-family: Georgia, serif;
-  text-align: center;
+  background: linear-gradient(145deg,#160817,#310d29,#090914);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Georgia,serif;
   overflow-x: hidden;
-  overflow-y: auto;
+  color: white;
 }
 
-/* BACKGROUND LIGHTS */
-
-.glow {
+.flower {
   position: fixed;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: #ff1493;
-  filter: blur(120px);
-  opacity: 0.18;
+  font-size: 25px;
+  animation: float 7s infinite ease-in-out;
+  opacity: .75;
   pointer-events: none;
 }
 
-.glow.one {
-  top: 5%;
-  left: -100px;
+.f1 {top: 8%; left: 8%;}
+.f2 {top: 15%; right: 10%; animation-delay: 2s;}
+.f3 {bottom: 12%; left: 12%; animation-delay: 3s;}
+.f4 {bottom: 8%; right: 10%; animation-delay: 1s;}
+
+@keyframes float {
+  0%,100% {transform: translateY(0) rotate(0deg);}
+  50% {transform: translateY(-25px) rotate(15deg);}
 }
-
-.glow.two {
-  bottom: 5%;
-  right: -100px;
-  background: #a020f0;
-}
-
-/* MAIN CONTENT */
-
-.container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 750px;
-  margin: auto;
-  padding: 55px 20px;
-}
-
-/* TOP LABEL */
-
-.top-label {
-  color: #ff9ed5;
-  font-size: 12px;
-  letter-spacing: 6px;
-  margin-bottom: 22px;
-}
-
-/* MAIN TITLE */
-
-h1 {
-  font-size: clamp(48px, 12vw, 88px);
-  letter-spacing: 9px;
-  color: #ffb4df;
-  text-shadow:
-    0 0 10px #ff1493,
-    0 0 30px #ff1493,
-    0 0 65px #a00070;
-  animation: titleGlow 3s infinite alternate;
-}
-
-@keyframes titleGlow {
-  from {
-    text-shadow: 0 0 15px #ff1493;
-  }
-  to {
-    text-shadow: 0 0 45px #ff1493,
-                 0 0 80px #a00070;
-  }
-}
-
-/* SUBTITLE */
-
-.subtitle {
-  margin-top: 22px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: #f9c9e5;
-  letter-spacing: 1px;
-}
-
-/* DECORATIVE LINE */
-
-.line {
-  width: 110px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #ff69b4, transparent);
-  margin: 28px auto;
-}
-
-/* FLOWERS */
-
-.flower-box {
-  margin: 35px auto;
-  font-size: clamp(48px, 12vw, 75px);
-  animation: flowerMove 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 15px #ff1493);
-}
-
-@keyframes flowerMove {
-  0%, 100% {
-    transform: translateY(0) rotate(-4deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(4deg);
-  }
-}
-
-/* MESSAGE CARD */
 
 .card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,160,220,0.35);
-  border-radius: 22px;
-  padding: 30px 20px;
-  margin-top: 35px;
-  box-shadow: 0 0 35px rgba(255,20,147,0.12);
-  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 25px;
+  text-align: center;
+  border: 1px solid #d68aaf;
+  border-radius: 25px;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 0 40px #e8439360;
+  backdrop-filter: blur(12px);
 }
 
-.card h2 {
-  color: #ffb4df;
-  font-size: 25px;
+.flowers {
+  font-size: 35px;
   margin-bottom: 15px;
 }
 
-.card p {
-  color: #f5d9eb;
-  font-size: 16px;
-  line-height: 1.9;
+.subtitle {
+  color: #f3a6c9;
+  letter-spacing: 5px;
+  font-size: 11px;
 }
 
-/* BUTTON */
+h1 {
+  color: #ffb5d5;
+  font-size: 39px;
+  letter-spacing: 5px;
+  margin: 25px 0;
+  text-shadow: 0 0 20px #ff4d9d;
+}
+
+.line {
+  height: 1px;
+  width: 80px;
+  background: #ed9cbe;
+  margin: 20px auto;
+}
+
+p {
+  color: #f6dce9;
+  font-size: 16px;
+  line-height: 2;
+  margin: 16px 0;
+}
 
 button {
-  margin-top: 30px;
-  padding: 16px 32px;
-  border: 1px solid #ff8acb;
-  border-radius: 40px;
-  background: linear-gradient(120deg, #b00067, #ff299c);
+  background: linear-gradient(90deg,#a52c68,#e65b9c);
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
   color: white;
-  font-size: 16px;
-  font-family: Georgia, serif;
-  letter-spacing: 1px;
-  box-shadow: 0 0 25px rgba(255,20,147,0.45);
+  font-size: 15px;
+  margin-top: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 0 20px #ed5b9c65;
 }
 
 button:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 40px #ff1493;
+  transform: scale(1.05);
 }
-
-/* SECRET MESSAGE */
 
 #secret {
   display: none;
-  margin-top: 30px;
-  padding: 25px;
-  border-radius: 20px;
-  background: rgba(255,20,147,0.12);
-  border: 1px solid #ff69b4;
-  animation: appear 1s ease;
-}
-
-#secret h2 {
-  color: #ffb4df;
-  margin-bottom: 15px;
-}
-
-#secret p {
-  color: #ffe0f1;
-  line-height: 1.9;
-  font-size: 17px;
+  margin-top: 25px;
+  animation: appear 2s ease;
 }
 
 @keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity:0;transform:translateY(25px);}
+  to {opacity:1;transform:translateY(0);}
 }
 
-/* BOTTOM TEXT */
+.heart {
+  font-size: 30px;
+  margin: 15px;
+  animation: beat 1.5s infinite;
+}
+
+@keyframes beat {
+  50% {transform: scale(1.2);}
+}
 
 .footer {
-  margin-top: 45px;
-  color: #d99abd;
-  font-size: 13px;
-  letter-spacing: 2px;
-}
-
-/* FALLING DECORATIONS */
-
-.falling {
-  position: fixed;
-  top: -50px;
-  z-index: 1;
-  pointer-events: none;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(700deg);
-    opacity: 0;
-  }
-}
-
-/* SPARKLES */
-
-.sparkle {
-  position: fixed;
-  color: #ffc0e0;
-  font-size: 15px;
-  pointer-events: none;
-  animation: sparkle 3s infinite alternate;
-}
-
-@keyframes sparkle {
-  from {
-    opacity: 0.2;
-    transform: scale(0.7);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1.4);
-  }
-}
-
-/* MOBILE DESIGN */
-
-@media(max-width: 480px) {
-  .container {
-    padding: 45px 18px;
-  }
-
-  h1 {
-    letter-spacing: 5px;
-  }
-
-  .subtitle {
-    font-size: 15px;
-  }
-
-  .card {
-    padding: 24px 16px;
-  }
+  color: #e9a1c0;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 30px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="glow one"></div>
-<div class="glow two"></div>
+<div class="flower f1">🌹</div>
+<div class="flower f2">🌸</div>
+<div class="flower f3">💐</div>
+<div class="flower f4">🌷</div>
 
-<div class="container">
+<div class="card">
 
-  <div class="top-label">
-    ✦ A WORLD OF SECRETS ✦
-  </div>
+  <div class="flowers">🌹 🌸 🌹</div>
 
-  <h1>MYSTERY</h1>
+  <div class="subtitle">FARIIN QALBI KA TIMID</div>
 
-  <p class="subtitle">
-    Not everything beautiful needs an explanation...
-    <br>
-    Some things are simply magical. ✨
-  </p>
+  <h1>RIDWAAN</h1>
 
   <div class="line"></div>
 
-  <div class="flower-box">
-    🌹 🌸 🌷
-  </div>
+  <p>
+    Waxaa jira magacyo la maqlo,
+    kuwo la xasuusto, iyo kuwo
+    qalbiga meel gaar ah ka gala...
+  </p>
 
-  <div class="card">
-    <h2>A Little Mystery 💗</h2>
+  <p>
+    Magacaagu wuxuu ka mid yahay
+    kuwa aan si fudud loo illaawin.
+  </p>
+
+  <button onclick="reveal()">🌹 Fur Fariinta</button>
+
+  <div id="secret">
+
+    <div class="heart">💗</div>
 
     <p>
-      Behind every beautiful moment,
-      there is a secret waiting to be discovered.
-      <br>
-      Are you ready to discover yours?
+      Ridwaan, haddii ubaxyadu ay hadli lahaayeen,
+      waxay ka sheekayn lahaayeen quruxda
+      shakhsiyaddaada.
     </p>
 
-    <button onclick="revealSecret()">
-      ✨ Discover The Secret ✨
-    </button>
+    <p>
+      Waxaad leedahay dabeecad gaar ah,
+      hadal macaan iyo joogitaan aan
+      si fudud loo hilmaami karin.
+    </p>
 
-    <div id="secret">
-      <h2>🌹 A Special Message 🌹</h2>
+    <p>
+      Mararka qaar qof uma baahna inuu
+      wax badan sameeyo si uu qof kale
+      qalbigiisa uga helo meel gaar ah.
+    </p>
 
-      <p>
-        You are rare, you are beautiful,
-        and you are one of a kind. 💖
-        <br><br>
-        Never forget how special you are.
-        <br>
-        Some mysteries are worth keeping forever. ✨
-      </p>
+    <p>
+      Adiga oo keliya ayaaba noqon kara
+      sababta dhoolla-caddayn aan la filayn.
+    </p>
 
-      <div style="font-size:40px; margin-top:20px;">
-        💐💕🌹
-      </div>
-    </div>
+    <div class="line"></div>
+
+    <h2 style="color:#ffacd0;line-height:1.7;">
+      Ridwaan ❤️
+    </h2>
+
+    <p>
+      Haddii ubax kastaa uu yahay eray ammaan ah,
+      waxaan kuu hibayn lahaa beer dhan. 🌹
+    </p>
+
+    <div style="font-size:30px;">🌹💗🌸💐</div>
+
   </div>
-
-  <div class="flower-box">
-    💐 🌺 💐
-  </div>
-
-  <div class="line"></div>
-
-  <p class="subtitle">
-    "Every flower has a story.
-    Every heart has a secret."
-  </p>
 
   <div class="footer">
-    MADE WITH LOVE ♡ MYSTERY
+    QALBI AYAA QORAY • MAGACNA MA LAHAN
   </div>
 
 </div>
 
 <script>
-function revealSecret() {
-  const secret = document.getElementById("secret");
-
-  secret.style.display = "block";
-
-  document.querySelector("button").innerHTML =
-    "💗 Your Secret Is Revealed 💗";
-
-  secret.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
+function reveal() {
+  document.getElementById("secret").style.display = "block";
 }
-
-/* FALLING FLOWERS AND HEARTS */
-
-const decorations = [
-  "🌹", "🌸", "💗", "✨",
-  "🌷", "💕", "💮", "🌺"
-];
-
-function createFalling() {
-  const item = document.createElement("div");
-
-  item.className = "falling";
-  item.innerHTML =
-    decorations[Math.floor(Math.random() * decorations.length)];
-
-  item.style.left = Math.random() * 100 + "vw";
-  item.style.fontSize = (18 + Math.random() * 25) + "px";
-  item.style.animationDuration = (5 + Math.random() * 6) + "s";
-
-  document.body.appendChild(item);
-
-  setTimeout(() => item.remove(), 11000);
-}
-
-setInterval(createFalling, 450);
-
-/* SPARKLES */
-
-function createSparkle() {
-  const star = document.createElement("div");
-
-  star.className = "sparkle";
-  star.innerHTML = "✦";
-  star.style.left = Math.random() * 100 + "vw";
-  star.style.top = Math.random() * 100 + "vh";
-
-  document.body.appendChild(star);
-
-  setTimeout(() => star.remove(), 4000);
-}
-
-setInterval(createSparkle, 700);
 </script>
 
 </body>
